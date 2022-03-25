@@ -5,9 +5,9 @@ import {
 } from '@angular/core';
 
 @Component({
-  selector: 'app-home-page',
-  templateUrl: './home.page.html',
+  selector: 'lib-today',
+  templateUrl: './today.component.html',
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomePage {}
+export class TodayComponent {}
