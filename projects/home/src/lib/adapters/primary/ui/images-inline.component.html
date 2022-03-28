@@ -1,0 +1,5 @@
+<div class="d-flex justify-content-around">
+  <div class="d-inline" *ngFor="let image of images$ | async">
+    <img [src]="image.imageUrl" class="img-size" />
+  </div>
+</div>

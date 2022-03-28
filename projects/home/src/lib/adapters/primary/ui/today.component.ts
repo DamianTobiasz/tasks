@@ -10,4 +10,6 @@ import {
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TodayComponent {}
+export class TodayComponent {
+  today: Date = new Date();
+}

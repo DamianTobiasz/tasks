@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { HomePage } from './home.page';
 import { TodayComponentModule } from '../../../projects/home/src/lib/adapters/primary/ui/today.component-module';
 import { NavToAddTaskComponentModule } from '../../../projects/home/src/lib/adapters/primary/ui/nav-to-add-task.component-module';
+import { ImagesInlineComponentModule } from '../../../projects/home/src/lib/adapters/primary/ui/images-inline.component-module';
 
 @NgModule({ imports: [CommonModule, 
       RouterModule.forChild([
@@ -13,7 +14,8 @@ import { NavToAddTaskComponentModule } from '../../../projects/home/src/lib/adap
         }
       ]),
   TodayComponentModule,
-  NavToAddTaskComponentModule
+  NavToAddTaskComponentModule,
+  ImagesInlineComponentModule
 ],
   	declarations: [HomePage],
   	providers: [],
