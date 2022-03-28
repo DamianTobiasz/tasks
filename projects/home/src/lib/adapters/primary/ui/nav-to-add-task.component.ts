@@ -5,9 +5,9 @@ import {
 } from '@angular/core';
 
 @Component({
-  selector: 'app-home-page',
-  templateUrl: './home.page.html',
+  selector: 'lib-nav-to-add-task',
+  templateUrl: './nav-to-add-task.component.html',
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomePage {}
+export class NavToAddTaskComponent {}
