@@ -2,7 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { AddTaskPage } from './add-task.page';
-import { TodayComponentModule, ImagesInlineComponentModule } from '@home';
+import {
+  TodayComponentModule,
+  ImagesInlineComponentModule,
+  FirebaseImagesServiceModule,
+} from '@home';
 import { AddTaskComponentModule, FirebaseTasksServiceModule } from '@tasks';
 
 @NgModule({
@@ -18,6 +22,7 @@ import { AddTaskComponentModule, FirebaseTasksServiceModule } from '@tasks';
     ImagesInlineComponentModule,
     AddTaskComponentModule,
     FirebaseTasksServiceModule,
+    FirebaseImagesServiceModule,
   ],
   declarations: [AddTaskPage],
   providers: [],

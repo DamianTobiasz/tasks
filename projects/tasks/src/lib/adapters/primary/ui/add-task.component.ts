@@ -18,7 +18,7 @@ import {
 })
 export class AddTaskComponent {
   readonly taskDescription: FormGroup = new FormGroup({
-    description: new FormControl(),
+    description: new FormControl(''),
   });
 
   constructor(@Inject(ADDS_TASK_DTO) private _addsTaskDto: AddsTaskDtoPort) {}

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HomePage } from './home.page';
 import {
+  FirebaseImagesServiceModule,
   ImagesInlineComponentModule,
   NavToAddTaskComponentModule,
   TodayComponentModule,
@@ -20,6 +21,7 @@ import {
     TodayComponentModule,
     NavToAddTaskComponentModule,
     ImagesInlineComponentModule,
+    FirebaseImagesServiceModule,
   ],
   declarations: [HomePage],
   providers: [],
