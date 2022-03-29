@@ -1,10 +1,10 @@
-.violet {
-  background-color: #7749f8;
+.indigo {
+  background-color: $indigo-400;
 }
 
-.base-pad {
-  padding-left: 165px;
-  padding-right: 165px;
+.px-7 {
+  padding-left: $spacer * 10.3;
+  padding-right: $spacer * 10.3;
 }
 
 .img-size {
