@@ -1,5 +1,8 @@
-<div class="row justify-content-evenly align-items-end">
-  <div class="col text-center" *ngFor="let image of images$ | async">
-    <img [src]="image.imageUrl" class="img-size" />
+<div class="container d-flex justify-content-between">
+  <div
+    class="d-inline-block text-center w-25"
+    *ngFor="let image of images$ | async"
+  >
+    <img [src]="image.imageUrl" class="w-100 h-100" />
   </div>
 </div>

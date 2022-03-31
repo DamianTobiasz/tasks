@@ -22,6 +22,7 @@
     "@lowgular/shared": "0.0.7",
     "bootstrap": "^5.1.3",
     "firebase": "^8.0.1",
+    "ngx-bootstrap": "^7.1.2",
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

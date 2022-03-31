@@ -1,4 +1,4 @@
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import {
   Component,
   ViewEncapsulation,
@@ -9,6 +9,7 @@ import {
   ADDS_TASK_DTO,
   AddsTaskDtoPort,
 } from '../../../application/ports/secondary/adds-task.dto-port';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'lib-add-task',
@@ -18,16 +19,19 @@ import {
 })
 export class AddTaskComponent {
   readonly taskDescription: FormGroup = new FormGroup({
-    description: new FormControl(''),
+    description: new FormControl('', Validators.required),
   });
 
-  constructor(@Inject(ADDS_TASK_DTO) private _addsTaskDto: AddsTaskDtoPort) {}
-  //dlaczego wymusza mi opcjonala?
+  constructor(
+    @Inject(ADDS_TASK_DTO) private _addsTaskDto: AddsTaskDtoPort,
+    private router: Router
+  ) {}
+
   onTaskDescriptionSubmited(taskDescription: FormGroup): void {
     this._addsTaskDto.add({
-      id: '41',
       description: taskDescription.get('description')?.value,
       isDone: false,
     });
+    this.router.navigate(['/task-list']);
   }
 }
