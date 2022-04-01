@@ -1,20 +1,47 @@
 <div class="container">
   <div class="row py-5 border-bottom">
-    <div class="form-check py-2" *ngFor="let task of taskList$ | async">
-      <input class="form-check-input rounded-circle" type="checkbox" value="" />
-      <label class="form-check-label" for="flexCheckDefault">
-        {{ task.description }}
-      </label>
+    <div
+      class="form-check d-flex justify-content-between"
+      *ngFor="let task of taskList$ | async"
+    >
+      <div *ngIf="!task.isDone; else check">
+        <input
+          class="form-check-input rounded-circle"
+          type="checkbox"
+          value=""
+          (change)="onCheckChangeed(task)"
+        />
+        <label class="form-check-label" for="flexCheckDefault"
+          >{{ task.description }}
+        </label>
+      </div>
+      <ng-template #check
+        ><div>
+          <input
+            class="form-check-input rounded-circle bg-success"
+            checked
+            type="checkbox"
+            value=""
+            (change)="onCheckChangeed(task)"
+          />
+          <label
+            class="form-check-label text-decoration-line-through"
+            for="flexCheckDefault"
+            >{{ task.description }}
+          </label>
+        </div></ng-template
+      >
+
       <div class="btn-group" dropdown>
-        <button
+        <a
+          role="button"
           id="button-animated"
           dropdownToggle
           type="button"
-          class="btn btn-light"
           aria-controls="dropdown-animated"
+          ><span class="fw-bold fs-2">...</span></a
         >
-          <span class="fs-4">...</span>
-        </button>
+
         <ul
           id="dropdown-animated"
           *dropdownMenu

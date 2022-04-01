@@ -35,4 +35,13 @@ export class TaskListComponent {
       isDone: !task.isDone,
     });
   }
+
+  show = true;
+
+  onCheckChangeed(task: TaskDTO): void {
+    this._setsTaskDto.set({
+      id: task.id,
+      isDone: !task.isDone,
+    });
+  }
 }
