@@ -7,6 +7,7 @@ import { environment } from 'src/environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { InMemoryTaskStorageModule } from 'projects/tasks/src/lib/adapters/secondary/infrastructure/in-memory-task.storage-module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AngularFireModule.initializeApp(environment.firestoreConfig),
     BrowserAnimationsModule,
     InMemoryDateStorageModule,
+    InMemoryTaskStorageModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

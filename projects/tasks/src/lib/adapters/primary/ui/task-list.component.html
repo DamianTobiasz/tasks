@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row py-5 border-bottom">
     <div
-      class="form-check d-flex justify-content-between"
+      class="form-check py-2 d-flex justify-content-between"
       *ngFor="let task of taskList$ | async"
     >
       <div *ngIf="!task.isDone; else check">
@@ -49,13 +49,13 @@
           role="menu"
           aria-labelledby="button-animated"
         >
-          <li role="menuitem">
+          <li role="menuitem" (click)="onDeleteBtnClicked(task)">
             <a class="dropdown-item">Delete</a>
           </li>
-          <li role="menuitem">
+          <li role="menuitem" (click)="onDeleteBtnClicked(task)">
             <a class="dropdown-item">Delete</a>
           </li>
-          <li role="menuitem">
+          <li role="menuitem" (click)="onDeleteBtnClicked(task)">
             <a class="dropdown-item">Delete</a>
           </li>
         </ul>

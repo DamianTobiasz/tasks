@@ -4,9 +4,15 @@ import { TaskListComponent } from './task-list.component';
 import { RouterModule } from '@angular/router';
 
 import { BsDropdownModule, BsDropdownConfig } from 'ngx-bootstrap/dropdown';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 @NgModule({
-  imports: [CommonModule, RouterModule, BsDropdownModule.forRoot()],
+  imports: [
+    CommonModule,
+    RouterModule,
+    ModalModule.forRoot(),
+    BsDropdownModule.forRoot(),
+  ],
   declarations: [TaskListComponent],
   providers: [
     {
