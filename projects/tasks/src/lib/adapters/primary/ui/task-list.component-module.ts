@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 
 import { BsDropdownModule, BsDropdownConfig } from 'ngx-bootstrap/dropdown';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { AlertModule } from 'ngx-bootstrap/alert';
 
 @NgModule({
   imports: [
@@ -12,6 +13,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     RouterModule,
     ModalModule.forRoot(),
     BsDropdownModule.forRoot(),
+    AlertModule.forRoot(),
   ],
   declarations: [TaskListComponent],
   providers: [

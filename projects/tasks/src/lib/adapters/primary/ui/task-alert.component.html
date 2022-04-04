@@ -1,0 +1,8 @@
+<alert
+  type="success"
+  dismissOnTimeout="5000"
+  (onClose)="toDone()"
+  *ngIf="alertState$ | async as alert"
+>
+  1 Task {{ alert.state }}
+</alert>

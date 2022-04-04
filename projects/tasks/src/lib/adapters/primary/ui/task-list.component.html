@@ -9,7 +9,7 @@
           class="form-check-input rounded-circle"
           type="checkbox"
           value=""
-          (change)="onCheckChangeed(task)"
+          (change)="onUnCheckChanged(task)"
         />
         <label class="form-check-label" for="flexCheckDefault"
           >{{ task.description }}
@@ -22,7 +22,7 @@
             checked
             type="checkbox"
             value=""
-            (change)="onCheckChangeed(task)"
+            (change)="onCheckChanged(task)"
           />
           <label
             class="form-check-label text-decoration-line-through"
@@ -39,8 +39,18 @@
           dropdownToggle
           type="button"
           aria-controls="dropdown-animated"
-          ><span class="fw-bold fs-2">...</span></a
-        >
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="currentColor"
+            class="bi bi-three-dots"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
+            /></svg
+        ></a>
 
         <ul
           id="dropdown-animated"
