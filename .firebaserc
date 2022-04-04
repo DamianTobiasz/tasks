@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "tasks-6069d": {
+      "hosting": {
+        "tasks": [
+          "tasks-6069d"
+        ]
+      }
+    }
+  }
+}

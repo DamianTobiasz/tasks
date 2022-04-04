@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { HomePage } from './home.page';
+import { AddTaskPage } from './add-task.page';
 import {
-  FirebaseImagesServiceModule,
-  ImagesInlineComponentModule,
-  NavToAddTaskComponentModule,
   TodayComponentModule,
+  ImagesInlineComponentModule,
+  FirebaseImagesServiceModule,
 } from '@home';
+import { AddTaskComponentModule, FirebaseTasksServiceModule } from '@tasks';
 
 @NgModule({
   imports: [
@@ -15,16 +15,17 @@ import {
     RouterModule.forChild([
       {
         path: '',
-        component: HomePage,
+        component: AddTaskPage,
       },
     ]),
     TodayComponentModule,
-    NavToAddTaskComponentModule,
     ImagesInlineComponentModule,
+    AddTaskComponentModule,
+    FirebaseTasksServiceModule,
     FirebaseImagesServiceModule,
   ],
-  declarations: [HomePage],
+  declarations: [AddTaskPage],
   providers: [],
   exports: [],
 })
-export class HomePageModule {}
+export class AddTaskPageModule {}
