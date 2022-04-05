@@ -5,6 +5,7 @@ import { TaskListPage } from './task-list.page';
 import { TodayComponentModule } from '../../../projects/home/src/lib/adapters/primary/ui/today.component-module';
 import { TaskListComponentModule } from '../../../projects/tasks/src/lib/adapters/primary/ui/task-list.component-module';
 import { FirebaseTasksServiceModule } from '@tasks';
+import { TaskAlertComponentModule } from '../../../projects/tasks/src/lib/adapters/primary/ui/task-alert.component-module';
 
 @NgModule({
   imports: [
@@ -18,6 +19,7 @@ import { FirebaseTasksServiceModule } from '@tasks';
     TodayComponentModule,
     TaskListComponentModule,
     FirebaseTasksServiceModule,
+    TaskAlertComponentModule
   ],
   declarations: [TaskListPage],
   providers: [],

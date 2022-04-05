@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InMemoryTaskStorageModule } from 'projects/tasks/src/lib/adapters/secondary/infrastructure/in-memory-task.storage-module';
+import { InMemoryAlertTaskStorageModule } from '@tasks';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,6 +20,7 @@ import { InMemoryTaskStorageModule } from 'projects/tasks/src/lib/adapters/secon
     BrowserAnimationsModule,
     InMemoryDateStorageModule,
     InMemoryTaskStorageModule,
+    InMemoryAlertTaskStorageModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
