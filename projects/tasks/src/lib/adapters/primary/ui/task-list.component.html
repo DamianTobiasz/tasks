@@ -1,79 +1,79 @@
-<div class="container">
-  <div class="row py-5 border-bottom">
-    <div
-      class="form-check py-2 d-flex justify-content-between"
-      *ngFor="let task of taskList$ | async"
-    >
-      <div *ngIf="!task.isDone; else check">
+<div class="row mx-1 py-5 border-bottom">
+  <div
+    class="form-check py-2 d-flex justify-content-between"
+    *ngFor="let task of taskList$ | async"
+  >
+    <div *ngIf="!task.isDone; else check">
+      <input
+        class="form-check-input rounded-circle"
+        type="checkbox"
+        value=""
+        (change)="onUnCheckChanged(task)"
+      />
+      <label class="form-check-label" for="flexCheckDefault"
+        >{{ task.description }}
+      </label>
+    </div>
+    <ng-template #check
+      ><div>
         <input
-          class="form-check-input rounded-circle"
+          class="form-check-input rounded-circle bg-success"
+          checked
           type="checkbox"
           value=""
-          (change)="onUnCheckChanged(task)"
+          (change)="onCheckChanged(task)"
         />
-        <label class="form-check-label" for="flexCheckDefault"
+        <label
+          class="form-check-label text-decoration-line-through"
+          for="flexCheckDefault"
           >{{ task.description }}
         </label>
-      </div>
-      <ng-template #check
-        ><div>
-          <input
-            class="form-check-input rounded-circle bg-success"
-            checked
-            type="checkbox"
-            value=""
-            (change)="onCheckChanged(task)"
-          />
-          <label
-            class="form-check-label text-decoration-line-through"
-            for="flexCheckDefault"
-            >{{ task.description }}
-          </label>
-        </div></ng-template
-      >
+      </div></ng-template
+    >
 
-      <div class="btn-group" dropdown>
-        <a
-          role="button"
-          id="button-animated"
-          dropdownToggle
-          type="button"
-          aria-controls="dropdown-animated"
-          ><svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            fill="currentColor"
-            class="bi bi-three-dots"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
-            /></svg
-        ></a>
-
-        <ul
-          id="dropdown-animated"
-          *dropdownMenu
-          class="dropdown-menu"
-          role="menu"
-          aria-labelledby="button-animated"
+    <div class="btn-group" dropdown>
+      <a
+        role="button"
+        id="button-animated"
+        dropdownToggle
+        type="button"
+        aria-controls="dropdown-animated"
+        ><svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          fill="currentColor"
+          class="bi bi-three-dots"
+          viewBox="0 0 16 16"
         >
-          <li role="menuitem" (click)="onDeleteBtnClicked(task)">
-            <a class="dropdown-item">Delete</a>
-          </li>
-          <li role="menuitem" (click)="onDeleteBtnClicked(task)">
-            <a class="dropdown-item">Delete</a>
-          </li>
-          <li role="menuitem" (click)="onDeleteBtnClicked(task)">
-            <a class="dropdown-item">Delete</a>
-          </li>
-        </ul>
-      </div>
+          <path
+            d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"
+          /></svg
+      ></a>
+
+      <ul
+        id="dropdown-animated"
+        *dropdownMenu
+        class="dropdown-menu"
+        role="menu"
+        aria-labelledby="button-animated"
+      >
+        <li role="menuitem" (click)="onDeleteBtnClicked(task)">
+          <a class="dropdown-item">Delete</a>
+        </li>
+        <li role="menuitem" (click)="onDeleteBtnClicked(task)">
+          <a class="dropdown-item">Delete</a>
+        </li>
+        <li role="menuitem" (click)="onDeleteBtnClicked(task)">
+          <a class="dropdown-item">Delete</a>
+        </li>
+      </ul>
     </div>
   </div>
 </div>
 
-<div class="py-3">
-  <a class="btn indigo text-white" routerLink="/add-task">Add task</a>
+<div class="row py-3">
+  <div class="col-1 ps-3 pe-1">
+    <a class="btn indigo text-white" routerLink="/add-task">Add task</a>
+  </div>
 </div>
