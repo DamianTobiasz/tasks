@@ -5,7 +5,6 @@ import { map } from 'rxjs/operators';
 import { GetsAllImageDtoPort } from '../../../application/ports/secondary/gets-all-image.dto-port';
 import { ImageDTO } from '../../../application/ports/secondary/image.dto';
 import { filterByCriterion } from '@lowgular/shared';
-import { DateDTO } from '../../../application/ports/secondary/date.dto';
 
 @Injectable()
 export class FirebaseImagesService implements GetsAllImageDtoPort {

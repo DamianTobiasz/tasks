@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { AddTaskPage } from './add-task.page';
 import {
-  TodayComponentModule,
-  ImagesInlineComponentModule,
   FirebaseImagesServiceModule,
+  ImagesInlineComponentModule,
+  TodayComponentModule,
 } from '@home';
 import { AddTaskComponentModule, FirebaseTasksServiceModule } from '@tasks';
 
