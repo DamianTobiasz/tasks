@@ -2,8 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { TaskListPage } from './task-list.page';
-import { TodayComponentModule } from '@home';
-import { FirebaseTasksServiceModule, TaskListComponentModule } from '@tasks';
+import { TodayComponentModule } from '../../../projects/home/src/lib/adapters/primary/ui/today.component-module';
+import { TaskListComponentModule } from '../../../projects/tasks/src/lib/adapters/primary/ui/task-list.component-module';
+import { FirebaseTasksServiceModule } from '@tasks';
+import { TaskAlertComponentModule } from '../../../projects/tasks/src/lib/adapters/primary/ui/task-alert.component-module';
 
 @NgModule({
   imports: [
@@ -17,6 +19,7 @@ import { FirebaseTasksServiceModule, TaskListComponentModule } from '@tasks';
     TodayComponentModule,
     TaskListComponentModule,
     FirebaseTasksServiceModule,
+    TaskAlertComponentModule,
   ],
   declarations: [TaskListPage],
   providers: [],
